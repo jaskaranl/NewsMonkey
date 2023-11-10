@@ -9,11 +9,11 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Router>
+        <Router basename="/NewsMonkey">
           <Navbar />
 
           <Switch>
-            <Route exact path="/">
+            <Route path="/">
               <News
                 key="general"
                 pageSize={8}
@@ -21,7 +21,7 @@ export default class App extends Component {
                 category="general"
               />
             </Route>
-            <Route exact path="/business">
+            <Route path="/business">
               <News
                 key="business"
                 pageSize={8}
